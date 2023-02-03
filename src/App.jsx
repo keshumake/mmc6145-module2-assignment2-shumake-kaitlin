@@ -4,6 +4,7 @@ import Header from "./components/header";
 import Modal from "./components/modal";
 import { useTimer } from "./util/customHooks";
 
+
 export default function App() {
   const [showModal, setShowModal] = useState(false);
 
@@ -28,10 +29,12 @@ export default function App() {
       <Header
         // add time, bestTime, previousTime props
         openModal={() => setShowModal(true)}
+        
       />
       <CardGame
         // add onGameStart, onGameEnd props
         cardTexts={cardTexts}
+
       />
       <Modal isShown={showModal} close={() => setShowModal(false)} />
     </>
