@@ -37,12 +37,16 @@ export default function App() {
         // add time, bestTime, previousTime props
         openModal={() => setShowModal(true)}
         
+        time={}
+        bestTime={}
+        previousTime={}
       />
       <CardGame
         // add onGameStart, onGameEnd props
         cardTexts={cardTexts}
 
-        onclick={() => onGameStart(time + 1)}
+        onGameStart={}
+        onGameEnd={}
 
       />
       <Modal isShown={showModal} close={() => setShowModal(false)} />
