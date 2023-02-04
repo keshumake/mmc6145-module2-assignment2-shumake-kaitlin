@@ -29,17 +29,22 @@ export default function App() {
       <Header
         // add time, bestTime, previousTime props
         openModal={() => setShowModal(true)}
+
         
-        time={useState(0)}
-        bestTime={this.bestTime}
-        previousTime={this.previousTime}
+          useTimer={() => {
+            timerStart(time + 1)
+            timerStop(time(0))
+            timerReset
+            bestTime(this.time);
+          }
+          
+        }
       />
       <CardGame
         // add onGameStart, onGameEnd props
         cardTexts={cardTexts}
 
-        onGameStart={timerStart}
-        onGameEnd={timerStop}
+        onGameEnd
 
       />
       <Modal isShown={showModal} close={() => setShowModal(false)} />
