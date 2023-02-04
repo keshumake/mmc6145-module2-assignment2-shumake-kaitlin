@@ -16,7 +16,7 @@ export default function App() {
   } = useTimer();
 
   function useTimer() {
-    time = useState(0);
+    time = useState(0),
     timerStart = () => {
       setInterval(() => {
         time => time + 1
@@ -27,7 +27,7 @@ export default function App() {
       clearInterval(time(0))
     }
     timerReset = () => {
-      
+
     }
   }
 
