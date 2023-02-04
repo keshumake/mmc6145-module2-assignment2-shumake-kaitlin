@@ -34,8 +34,8 @@ export default function App() {
           useTimer={() => {
             timerStart(time + 1)
             timerStop(time(0))
-            timerReset
-            bestTime(this.time);
+            timerReset(useState(0))
+            bestTime(this.time)
           }
           
         }
