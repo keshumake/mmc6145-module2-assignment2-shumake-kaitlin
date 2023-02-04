@@ -17,9 +17,18 @@ export default function App() {
 
   function useTimer() {
     time = useState(0);
-    timerStart = { onclick={props.seconds + 1 }};
-    timerStop = useState(false);
-    timerReset = {}
+    timerStart = () => {
+      setInterval(() => {
+        time => time + 1
+      }, 1000)
+    }
+
+    timerStop = () => {
+      clearInterval(time(0))
+    }
+    timerReset = () => {
+      
+    }
   }
 
   const cardTexts = [
