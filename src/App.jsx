@@ -15,6 +15,13 @@ export default function App() {
     reset: timerReset,
   } = useTimer();
 
+  function useTimer() {
+    time = useState(0);
+    timerStart = { onclick={props.seconds + 1 }};
+    timerStop = useState(false);
+    timerReset = {}
+  }
+
   const cardTexts = [
     "Bunny 🐰",
     "Frog 🐸",
@@ -34,6 +41,8 @@ export default function App() {
       <CardGame
         // add onGameStart, onGameEnd props
         cardTexts={cardTexts}
+
+        onclick={() => onGameStart(time + 1)}
 
       />
       <Modal isShown={showModal} close={() => setShowModal(false)} />
