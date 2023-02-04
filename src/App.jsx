@@ -15,22 +15,6 @@ export default function App() {
     reset: timerReset,
   } = useTimer();
 
-  function useTimer() {
-    time = useState(0),
-    timerStart = () => {
-      setInterval(() => {
-        time => time + 1
-      }, 1000)
-    }
-
-    timerStop = () => {
-      clearInterval(time(0))
-    }
-    timerReset = () => {
-
-    }
-  }
-
   const cardTexts = [
     "Bunny 🐰",
     "Frog 🐸",
@@ -46,16 +30,16 @@ export default function App() {
         // add time, bestTime, previousTime props
         openModal={() => setShowModal(true)}
         
-        //time={}
-        //bestTime={}
-        //previousTime={}
+        time={useState(0)}
+        bestTime={this.bestTime}
+        previousTime={this.previousTime}
       />
       <CardGame
         // add onGameStart, onGameEnd props
         cardTexts={cardTexts}
 
-        //onGameStart={}
-        //onGameEnd={}
+        onGameStart={timerStart}
+        onGameEnd={timerStop}
 
       />
       <Modal isShown={showModal} close={() => setShowModal(false)} />
