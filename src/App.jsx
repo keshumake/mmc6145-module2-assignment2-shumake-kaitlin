@@ -30,13 +30,11 @@ export default function App() {
         // add time, bestTime, previousTime props
         openModal={() => setShowModal(true)}
 
-        
-          useTimer={() => {
-            timerStart(time + 1)
-            timerStop(time(0))
-            timerReset(useState(0))
-            bestTime(this.time)
-          }
+          time={() => useTimer(
+            bestTime={useState()},
+            previousTime={useState()}
+
+          )}
           
         }
       />
@@ -44,7 +42,8 @@ export default function App() {
         // add onGameStart, onGameEnd props
         cardTexts={cardTexts}
 
-        onGameEnd
+        onGameStart={useState(timerStart())}
+        onGameEnd={useState(timerStop())}
 
       />
       <Modal isShown={showModal} close={() => setShowModal(false)} />
