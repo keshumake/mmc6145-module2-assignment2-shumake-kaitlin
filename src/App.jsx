@@ -33,13 +33,9 @@ export default function App() {
     setBestTime()
   }
 
-  //     if({bestTime} >= {previousTime}) {
-      //     return bestTime
-      //   } else {
-      //     return previousTime
-      //   }
-      // }
-
+      if(bestTime > previousTime) {
+        setBestTime(bestTime)}
+        
 
   return (      
     <>
